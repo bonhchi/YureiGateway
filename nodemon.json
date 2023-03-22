@@ -1,0 +1,9 @@
+{
+    "env":{
+        "CLOUDINARY":{
+            "CLOUD_NAME": "dxqpit0yk",
+            "API_KEY": "962357778471638",
+            "API_SECRET": "lAtoBaoOExMxxtUkbdLNsNlViX8"
+        }
+    }
+}
