@@ -1,9 +1,17 @@
 const express = require('express');
+var cors = require('cors');
 
 const app = express();
 
-const port = process.env.PORT || 3001;
+const imagesRoutes = require('./src/routes/images');
 
-app.listen(port, () => {
-    console.log('listening on 3001');
-});
+
+const port = process.env.PORT || 3001;
+app.use(cors({
+    credentials: true,
+    origin: true
+    }));
+
+app.use(imagesRoutes);
+
+app.listen(port);
