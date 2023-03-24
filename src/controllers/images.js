@@ -1,17 +1,22 @@
-const cloudinary = require('../utils/cloudinary');
+const cloudinary = require('cloudinary').v2;
+const dotenv = require('dotenv');
+dotenv.config();
+
+const cloudinaryConfig = cloudinary.config({ 
+    cloud_name: process.env.CLOUD_NAME, 
+    api_key: process.env.API_KEY, 
+    api_secret: process.env.API_SECRET,
+    secure: true
+});
 
 exports.getImage = async (req, res) => 
 {
     try {
-        // console.log("test")
-        // res.json({msg: "res ok"})
-        await cloudinary
-        .resources_by_id(
-            ["kdry6kikm8ozdxvqpf9b"]
-        )
+        await cloudinary.api
+        .resources()
         .then(result=> res.json({result}));
     } catch (error) {
-        console.log("con tac");
+        console.log(error);
         return error;
     }
 }
