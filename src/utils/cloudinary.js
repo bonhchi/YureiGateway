@@ -9,3 +9,14 @@ const cloudinaryConfig = cloudinary.config({
     api_secret: process.env.API_SECRET,
     secure: true
 });
+
+exports.getCloudImage = async (res) => {
+    try {
+        await cloudinary.api
+        .resources()
+        .then(result=> res.json({result}));
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}  
