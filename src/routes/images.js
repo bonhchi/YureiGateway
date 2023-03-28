@@ -8,6 +8,6 @@ const imagesController = require('../controllers/images');
 
 router.get('/api/get-image', imagesController.getImage);
 
-router.get('/api/get-detail-image/:imageId', imagesController.getImage);
+//router.get('/api/get-detail-image/:imageId', imagesController.getImage);
 
 module.exports = router;
