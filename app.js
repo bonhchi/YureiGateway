@@ -5,7 +5,6 @@ var configEnv = require('dotenv');
 const app = express();
 
 const imagesRoutes = require('./src/routes/images');
-const wallpaperRoutes = require('./src/routes/wallpaper');
 
 configEnv.config();
 
@@ -17,6 +16,5 @@ app.use(cors({
 }));
 
 app.use(imagesRoutes);
-app.use(wallpaperRoutes);
 
 app.listen(port);
