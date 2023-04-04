@@ -13,7 +13,6 @@
   "author": "Phu Tran",
   "license": "ISC",
   "dependencies": {
-    "anime-wallpaper": "^1.1.1",
     "cloudinary": "^1.35.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
