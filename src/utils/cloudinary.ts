@@ -1,4 +1,4 @@
-export const cloudinary = require('cloudinary').v2;
+import cloudinary = require('cloudinary').v2;
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -19,4 +19,6 @@ exports.getCloudImage = async (res) => {
         console.log(error);
         return error;
     }
-}  
+}
+
+// default export cloudinary;

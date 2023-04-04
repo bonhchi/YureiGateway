@@ -1,10 +1,10 @@
-const express = require('express');
-var cors = require('cors');
-var configEnv = require('dotenv');
+import express from "express";
+import cors from 'cors';
 
+import imagesRoutes from './src/routes/images';
+
+let configEnv = require('dotenv');
 const app = express();
-
-const imagesRoutes = require('./src/routes/images');
 
 configEnv.config();
 
