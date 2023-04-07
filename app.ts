@@ -1,8 +1,8 @@
 import express from "express";
 import cors from 'cors';
-import imagesRoutes from './src/routes/images';
+import imageRouter from './src/routes/images.js';
+import * as configEnv from 'dotenv';
 
-let configEnv = require('dotenv');
 const app = express();
 
 configEnv.config();
@@ -14,7 +14,7 @@ app.use(cors({
     origin: true
 }));
 
-app.use(imagesRoutes);
+app.use(imageRouter);
 
 app.listen(port);
 

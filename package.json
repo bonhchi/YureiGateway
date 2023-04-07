@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "export ENV=dev",
     "compile": "export ENV=dev",
-    "start-server": "node app.ts && npm start",
+    "start-server": "ts-node-esm app.ts && npm start",
     "start:dev": "nodemon app.ts"
   },
   "author": "Phu Tran",

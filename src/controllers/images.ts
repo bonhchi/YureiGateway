@@ -1,10 +1,12 @@
-export const cloudinary = require('../utils/cloudinary');
+import CloudinaryUtils from '../utils/cloudinary.js';
+
+let cloudinaryUtil =  new CloudinaryUtils();
 export default class ImageController {
 
     getImage = async (req : any, res : any) => 
     {
         try {
-            await cloudinary.getCloudImage(res);
+            await cloudinaryUtil.getCloudImage(res);
         } catch (error) {
             console.log(error);
             return error;
