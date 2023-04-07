@@ -1,9 +1,8 @@
 {
     "env":{
-        "CLOUDINARY":{
-            "CLOUD_NAME": "dxqpit0yk",
-            "API_KEY": "962357778471638",
-            "API_SECRET": "lAtoBaoOExMxxtUkbdLNsNlViX8"
-        }
+        "CLOUD_NAME": "ngocphu",
+        "API_KEY": "895443749578963",
+        "API_SECRET": "YglgL8RlmLlIdcrOUCaMTyk_Igo",
+        "PORT" : 3001
     }
 }
