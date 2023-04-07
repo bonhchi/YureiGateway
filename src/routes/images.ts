@@ -1,10 +1,11 @@
 import path from "path";
-import express from "express";
+import express, { Router } from "express";
+import ImageController from "../controllers/images.js";
 
-let router = express.Router();
+let imageRouter : Router = express.Router();
 
-const imagesController = require('../controllers/images');
+let imageController = new ImageController();
 
-router.get('/api/get-image', imagesController.getImage);
+imageRouter.get('/api/get-image', imageController.getImage);
 
-export default router;
+export default imageRouter;

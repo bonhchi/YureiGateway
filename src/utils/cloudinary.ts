@@ -1,4 +1,4 @@
-import cloudinary = require('cloudinary').v2;
+const cloudinary = require('cloudinary').v2;
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -10,11 +10,11 @@ const cloudinaryConfig = cloudinary.config({
     secure: true
 });
 
-exports.getCloudImage = async (res) => {
+exports.getCloudImage = async (res : any) => {
     try {
         await cloudinary.api
         .resources()
-        .then(result=> res.json({result}));
+        .then((result : any)=> res.json({result}));
     } catch (error) {
         console.log(error);
         return error;
